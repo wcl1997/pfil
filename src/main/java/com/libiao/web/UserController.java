@@ -3,10 +3,7 @@ package com.libiao.web;
 import com.libiao.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,7 +20,7 @@ public class UserController {
 
     @RequestMapping("/login")
     public String index(){
-        return "/login/form-3/index";
+        return "login";
     }
 
     @RequestMapping(value = "/check")
@@ -32,8 +29,13 @@ public class UserController {
         String password = request.getParameter("form-password");
         boolean f = userService.check(username, password);
         if (f == true){
-            return "test";
+            return "index";
         }
-        return "login";
+        return "loginErr";
+    }
+
+    @RequestMapping("/register")
+    public String register(){
+        return "register";
     }
 }
