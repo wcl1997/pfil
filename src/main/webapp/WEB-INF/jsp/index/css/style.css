@@ -1,0 +1,153 @@
+ 
+/* ---------------------------------------------------------------------------- */
+/* ------------------------------------Html-Body------------------------------- */
+/* ---------------------------------------------------------------------------- */
+html, body {width:100%; padding:0; margin:0;}
+body {background:#F7F7F7; color: #333333;font-size: 16px; font-family: Arial, Helvetica, sans-serif}
+
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+html { -webkit-text-size-adjust: none;}
+.video embed,.video object,.video iframe { width: 100%;  height: auto;}
+img{max-width:100%;	height: auto;width: auto\9; /* ie8 */}
+
+a{color: #333333;text-decoration: none;}
+a:hover {opacity: 0.9; text-decoration: none; color: #BBC202;}
+
+h1 {font-size: 55px;}
+h2 {font-size: 45px;}
+h3 {font-size: 30px;}
+h4 {font-size: 25px;}
+h5 {font-size: 20px;}
+
+.center{text-align: center; margin: 0 auto;}
+.f-right{float: right;}
+.f-left{float: left;}
+.t-right{text-align: right;}
+.t-left{text-align: left;}
+.t-justify{text-align: justify;}
+
+.clear{content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix:after, .clearfix:before{clear: both; content: '\0020'; display: block; visibility: hidden; width: 0; height: 0;}
+
+/* --Line-- */
+hr.line01,
+hr.line02 { margin: 10px auto; padding: 0; max-width: 90px;border: 0; border-top: solid 4px;text-align: center;}
+
+hr.line01 {border-color: #333;}
+hr.line02 {border-color: #fff;}
+
+.tlinks{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+/* ---------------------------------------------------------------------------- */
+/* -------------------------------------Header--------------------------------- */
+/* ---------------------------------------------------------------------------- */
+header{text-align: center; color: #fff;}
+
+
+.navbar-default {border-color: transparent;background-color: #222;}
+.navbar-default .navbar-brand {font-family: Helvetica,Arial,cursive;color: #BBC202;}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {color: #BBC202;}
+
+.navbar-default .navbar-collapse {border-color: rgba(255,255,255,.02);}
+
+.navbar-default .navbar-toggle {border-color: #BBC202;background-color: #BBC202;}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {background-color: #BBC202;}
+
+.navbar-default .nav li a {text-transform: uppercase;font-family: Helvetica,Arial,sans-serif;font-weight: 400;letter-spacing: 1px;color: #fff;}
+.navbar-default .nav li a:hover,
+.navbar-default .nav li a:focus {outline: 0;color: #BBC202;}
+
+@media(min-width:900px) {
+	.navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+}
+
+/* ---------------------------------------------------------------------------- */
+/* -------------------------------------Content-------------------------------- */
+/* ---------------------------------------------------------------------------- */
+
+#page-content{}
+#page-content.index-page {}
+#page-content.sub-page {margin: 30px 0;}
+
+/* ---HomePage--- */
+.box-content {padding:70px 0;}
+.box-content .heading{margin-bottom: 50px; text-align: center;letter-spacing:2px;}
+
+.box-content.box-style{background: url(../images/bg.jpg) fixed ; color: #ffffff;}
+
+.box-content.box-1 {text-align: center;color:#333333;}
+.box-content.box-1 .box-item{margin-bottom: 20px;}
+
+.box-content.box-2 {}
+.box-content.box-2 .box-item {margin-bottom:30px;border: 2px solid #fff;padding:10px; text-align: justify;}
+@media(max-width:450px) {
+	.box-content.box-2 .box-item img{float: none;display: block;}
+}
+
+.box-content.box-3 {}
+.box-content.box-3 h3 {margin: 0;font-size:30px;} 
+.box-content.box-3 h4{font-size:20px; }
+.box-content.box-3 .news-item-1{margin-bottom: 20px;}
+.box-content.box-3 .news-item-2 {margin-bottom: 20px;}
+.box-content.box-3 .news-item-2 img{display: inline-block;}
+.box-content.box-3 .info {font-style: italic; margin:5px 0 10px 0; color:#888;}
+.box-content.box-3 .info a{color: #076BA5;text-decoration: none;transition:all ease 150ms;}
+.box-content.box-3 .info a:hover {opacity:0.5;}
+
+.box-content.box-4 {text-align:center;}
+.box-content.box-4 .box-item{margin-bottom:80px;}
+
+.box-content.box-5 {text-align:center;}
+
+/* ---------------------------------------------------------------------------- */
+/* -------------------------------------Footer--------------------------------- */
+/* ---------------------------------------------------------------------------- */
+footer {color: #fff; text-align: center;background:#333333;padding: 20px 0;}
+
+footer a{color:#fff; text-decoration: underline;}
+
+/* Line 743 */
+footer .social-buttons a
+{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  outline-width: 0px;
+  outline-style: none;
+  color: #ffffff;
+  background-color: #F7F7F7;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  color:#333333;
+}
+
+
+/* ---------------------------------------------------------------------------- */
+/* -------------------------------------Contact-------------------------------- */
+/* ---------------------------------------------------------------------------- */
+.form-group {margin-bottom: 20px;}
+
+.message{text-align: center;}
+.message .wrap{	padding: 50px; background: #ffffff; border: 1px solid #333333;display: inline-block;border-radius: 5px;	-webkit-border-radius: 5px; -moz-border-radius: 5px;-khtml-border-radius: 5px;}
+
+/* ---------------------------------------------------------------------------- */
+/* --------------------------------------Btn----------------------------------- */
+/* ---------------------------------------------------------------------------- */
+.btn {margin:20px 0;}
+.btn-1 {padding: 10px 20px;background-color:#BBC202;border: 2px solid transparent;font-size:18px;color:#fff;font-weight:500;}
+.btn-1:hover {background-color: #fff;color: #333;border: 2px solid #BBC202;font-weight:bold;}

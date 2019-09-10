@@ -21,15 +21,15 @@ public class UserController {
         return userService.check(userName,password);
     }*/
 
-    @RequestMapping("/index")
+    @RequestMapping("/login")
     public String index(){
-        return "login";
+        return "/login/form-3/index";
     }
 
     @RequestMapping(value = "/check")
     public String check(HttpServletRequest request) {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
+        String username = request.getParameter("form-username");
+        String password = request.getParameter("form-password");
         boolean f = userService.check(username, password);
         if (f == true){
             return "test";
