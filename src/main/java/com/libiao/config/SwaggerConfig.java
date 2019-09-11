@@ -31,11 +31,11 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("demo api 说明")
-                .contact("xuwujing")
+                .title("api 说明")
+                .contact("李标")
                 .version("0.1")
-                .termsOfServiceUrl("localhost:8080/demo1/")
-                .description("demo api")
+                .termsOfServiceUrl("localhost:8080/pfil/")
+                .description("接口测试")
                 .build();
     }
 
