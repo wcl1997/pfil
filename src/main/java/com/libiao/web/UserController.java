@@ -1,5 +1,6 @@
 package com.libiao.web;
 
+import com.libiao.pojo.User;
 import com.libiao.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,12 +19,26 @@ public class UserController {
         return userService.check(userName,password);
     }*/
 
+    @RequestMapping("/")
+    public String index() {
+        return "redirect:/gallery";
+    }
+
     @RequestMapping("/login")
-    public String index(){
+    public String login(){
         return "login";
     }
 
     @RequestMapping(value = "/check")
+    public String check(User user) {
+        boolean f = userService.check(user.getU_name(), user.getU_password());
+
+        if (f == true){
+            return "gallery";
+        }
+        return "loginErr";
+    }
+    /*@RequestMapping(value = "/check")
     public String check(HttpServletRequest request) {
         String username = request.getParameter("form-username");
         String password = request.getParameter("form-password");
@@ -32,10 +47,41 @@ public class UserController {
             return "index";
         }
         return "loginErr";
+    }*/
+
+    @RequestMapping("/addUser")
+    public String addUser(User user){
+        userService.addUser(user);
+        return "login";
     }
 
     @RequestMapping("/register")
     public String register(){
         return "register";
+    }
+
+    @RequestMapping("/gallery")
+    public String gallery(){
+        return "gallery";
+    }
+
+    @RequestMapping("/contact")
+    public String contact(){
+        return "contact";
+    }
+
+    @RequestMapping("/about")
+    public String about(){
+        return "about";
+    }
+
+    @RequestMapping("/codes")
+    public String codes(){
+        return "codes";
+    }
+
+    @RequestMapping("/index")
+    public String index2(){
+        return "index";
     }
 }

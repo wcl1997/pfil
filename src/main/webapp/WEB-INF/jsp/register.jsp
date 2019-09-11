@@ -16,6 +16,46 @@
 		<link rel="stylesheet" href="reg/css/form-elements.css">
         <link rel="stylesheet" href="reg/css/style.css">
 
+        <style>
+            .form-bottom{
+                position: relative;
+            }
+            #pw, #em, #ph{
+                display: none;
+                width: 260px;
+                position: absolute;
+                left: 380px;
+                color: #fc8d8a;
+                text-align: center;
+            }
+            #pw{
+                bottom: 230px;
+                line-height: 36px;
+            }
+            #em{
+                bottom: 166px;
+                line-height: 36px;
+            }
+            #ph{
+                bottom: 100px;
+                line-height: 36px;
+            }
+            #pw .angle, #em .angle, #ph .angle{
+                display: inline-block;
+                border-top: 8px solid transparent;
+                border-bottom: 8px solid transparent;
+                border-left: 12px solid transparent;
+                border-right: 12px solid #9acfea;
+            }
+            #pw .content, #em .content, #ph .content{
+                display: inline-block;
+                width: 230px;
+                height: 36px;
+                border-radius: 6px;
+                background: #9acfea;
+            }
+        </style>
+
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -62,25 +102,34 @@
                         		</div>
                             </div>
                             <div class="form-bottom">
-			                    <form role="form" action="" method="post" class="login-form">
+			                    <form role="form" action="/addUser" method="post" class="login-form" id="form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="u_name" placeholder="Username..." class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        	<input type="password" name="u_password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
 									<div class="form-group">
-			                        	<label class="sr-only" for="form-password">email</label>
-			                        	<input type="password" name="form-password" placeholder="email..." class="form-password form-control" id="form-password">
+			                        	<label class="sr-only" for="form-password">Password again</label>
+			                        	<input type="password" name="form-password" placeholder="Password again..." class="form-password form-control" id="form-password-again">
 			                        </div>
 									<div class="form-group">
-			                        	<label class="sr-only" for="form-password">Security code</label>
-			                        	<input type="password" name="form-password" placeholder="Security code..." class="form-password form-control" id="form-password">
+			                        	<label class="sr-only" for="form-password">Phone</label>
+			                        	<input type="text" name="u_phone" placeholder="Phone..." class="form-password form-control" id="form-phone">
 			                        </div>
 			                        <button type="submit" class="btn">Sign up!</button>
 			                    </form>
+                                <div id="pw">
+                                    <span class="angle"></span><span class="content">两次输入的密码不一致</span>
+                                </div>
+                                <div id="em">
+                                    <span class="angle"></span><span class="content">邮箱格式不正确</span>
+                                </div>
+                                <div id="ph">
+                                    <span class="angle"></span><span class="content">手机号格式不正确</span>
+                                </div>
 		                    </div>
                         </div>
                     </div>
@@ -102,6 +151,59 @@
             <script src="reg/js/placeholder.js"></script>
         <![endif]-->
 
+        <script>
+            // $(".login-form").onsubmit = function (ev) {
+            //     $("#form-username").value = "王成龙";
+            //     ev.preventDefault();
+            // }
+            function getDOMById(id) {
+                return document.getElementById(id);
+            }
+            var form = document.getElementById("form");
+            form.onsubmit = function (ev) {
+                var username = getDOMById("form-username");
+                var password = getDOMById("form-password");
+                var password_again = getDOMById("form-password-again");
+                var email = getDOMById("form-email");
+                var phone = getDOMById("form-phone");
+                //两次密码是否相等
+                if (password.value != password_again.value) {
+                    var pw = getDOMById("pw");
+                    pw.style.display = "block";
+                    password.onfocus = function () {
+                        pw.style.display = "none";
+                    }
+                    password_again.onfocus = function () {
+                        pw.style.display = "none";
+                    }
+                    ev.preventDefault();
+                }
+                //验证邮箱格式
+                if (email.value != "") {
+                    var reg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+                    if (!reg.test(email.value)) {
+                        var em = getDOMById("em");
+                        em.style.display = "block";
+                        email.onfocus = function () {
+                            em.style.display = "none";
+                        }
+                        ev.preventDefault();
+                    }
+                }
+                //验证11位手机号格式
+                if (phone.value != "") {
+                    var part = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/;
+                    if (!part.test(phone.value)) {
+                        var ph = getDOMById("ph");
+                        ph.style.display = "block";
+                        phone.onfocus = function () {
+                            ph.style.display = "none";
+                        }
+                        ev.preventDefault();
+                    }
+                }
+            }
+        </script>
     </body>
 
 </html>

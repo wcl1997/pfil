@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>About</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -19,25 +19,24 @@
 </head>
 <body> 
 	<!-- banner -->
-	<div class="w3ls-banner jarallax">
+	<div class="w3ls-banner about-w3lsbanner">
 		<div class="w3lsbanner-info">
 			<!-- header -->
 			<div class="header">
 				<div class="container">   
 					<div class="agile_header_grid"> 
-						<div class="header-mdl agileits-logo"><!-- header-two --> 
+						<div class="header-mdl agileits-logo"> 
 							<h1><a href="index">Best Pets</a></h1>
 						</div>
 						<div class="agileits_w3layouts_sign_in">
 							<ul>
 								<li><a href="/login" data-toggle="modal" class="play-icon">Login</a></li>
 								<li><a href="/register" data-toggle="modal" class="play-icon">Register</a></li>
-								<%--<li>Call us : <span>(+00) 123 234</span></li>--%>
 							</ul>
 						</div>
 						<div class="clearfix"> </div>
 					</div> 
-					<div class="header-nav"><!-- header-three --> 	
+					<div class="header-nav"><!-- header-two --> 	
 						<nav class="navbar navbar-default">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -50,8 +49,8 @@
 							<!-- top-nav -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav cl-effect-16">
-									<li><a href="index" class="active" data-hover="Home">Home</a></li>
-									<li><a href="about" data-hover="About">About</a></li>
+									<li><a href="index" data-hover="Home">Home</a></li>
+									<li><a href="about" class="active" data-hover="About">About</a></li>
 									<li><a href="gallery" data-hover="Gallery">Gallery</a></li>
 									<li><a href="contact" data-hover="Contact">Contact</a></li>
 								</ul>  
@@ -61,88 +60,10 @@
 					</div>	
 				</div>	
 			</div>	
-			<!-- //header --> 
-			<!-- banner-text -->
-			<div class="banner-text agileinfo"> 
-				<div class="container">
-					<div class="agile_banner_info">
-						<div class="agile_banner_info1">
-							<h6>Quis nostrum exercitationem </h6>
-							<div id="typed-strings" class="agileits_w3layouts_strings">
-								<p>Welcome to<i> Best Pets</i></p>
-								<p><i>Pulvinar</i> Vitae Site</p>
-								<p>Curabi temlaci <i>Pharetra</i></p>
-							</div>
-							<span id="typed" style="white-space:pre;"></span>
-						</div>
-					</div> 
-					<div class="agile_social_icons_banner">
-						<ul class="agileits_social_list">
-							<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-						</ul>
-					</div> 
-				</div>
-			</div>
-			<!-- //banner-text -->  
+			<!-- //header -->  
 		</div>	
 	</div>	
-	<!-- //banner -->
-	<!-- banner-bottom -->
-	<div class="banner-bottom">
-		<div class="col-md-4 bnr-agileitsgrids">
-			<div class="agileinfo_banner_bottom_pos">
-				<div class="w3_agileits_banner_bottom_pos_grid">
-					<div class="col-xs-4 wthree_banner_bottom_grid_left">
-						<div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-							<i class="fa fa-clone" aria-hidden="true"></i>
-						</div>
-					</div>
-					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
-						<h4>Free Consultation</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 bnr-agileitsgrids w3grid1">
-			<div class="agileinfo_banner_bottom_pos">
-				<div class="w3_agileits_banner_bottom_pos_grid">
-					<div class="col-xs-4 wthree_banner_bottom_grid_left">
-						<div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-							<i class="fa fa-heart-o" aria-hidden="true"></i>
-						</div>
-					</div>
-					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
-						<h4>Certified Products</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 bnr-agileitsgrids w3grid2">
-			<div class="agileinfo_banner_bottom_pos">
-				<div class="w3_agileits_banner_bottom_pos_grid">
-					<div class="col-xs-4 wthree_banner_bottom_grid_left">
-						<div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-							<i class="fa fa-comment-o" aria-hidden="true"></i>
-						</div>
-					</div>
-					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
-						<h4>Free Helpline</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-	<!-- //banner-bottom -->
+	<!-- //banner --> 
 	<!-- welcome -->	
 	<div class="welcome">
 		<div class="container"> 
@@ -184,58 +105,127 @@
 		</div>
 	</div>
 	<!-- //welcome -->	
-	<!-- services --> 
-	<div class="services jarallax">
-		<div class="container">   
-			<h3 class="agileits-title w3title1">Our Services</h3>
-			<div class="services-w3ls-row">
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-					<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>
-					<h5>Lorem ipsum</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+	<!-- Stats -->
+	<div class="stats services jarallax"> 
+		<div class="container">    
+			<div class="stats-info agileits-w3layouts">
+				<div class="col-sm-3 col-xs-6 stats-grid">
+					<div class="stats-img">
+						<i class="fa fa-users" aria-hidden="true"></i>
+					</div>
+					<h5>Happy Clients</h5>
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='157000' data-delay='.5' data-increment="100">157000</div>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-					<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>
-					<h5>Ut non lacus</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+				<div class="col-sm-3 col-xs-6 stats-grid">
+					<div class="stats-img w3-agileits">
+						<i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+					</div>
+					<h5>Our Events</h5>
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='850' data-delay='8' data-increment="1">850</div>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-					<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>
-					<h5>Maec rutrum</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+				<div class="col-sm-3 col-xs-6 stats-grid">
+					<div class="stats-img w3-agileits">
+						<i class="fa fa-briefcase" aria-hidden="true"></i>
+					</div>	
+					<h5>Projects</h5> 
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='80000' data-delay='.5' data-increment="100">80000</div>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid">
-					<span class="glyphicon glyphicon-globe effect-1" aria-hidden="true"></span>
-					<h5>Phase gravida</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
-				</div> 
-				<div class="clearfix"> </div>
-			</div>  
-		</div> 
-	</div>
-	<!-- //services -->
-	<!-- blog-bottom -->
-	<div class="blog-bottom">
-		<div class="container">
-			<div class="col-sm-5 w3_agile_blog_bottom_left">
-				<img src="images/s1.jpg" alt=" " class="img-responsive" />
-			</div>
-			<div class="col-sm-7 w3_agile_blog_bottom_right">
-				<h5>Best Pets</h5>
-				<h3>24/7 Customer Service Support</h3>
-				<p>Pellentesque accumsan cursus dui, sodales blandit urna sodales vitae. 
-					Maecenas placerat eget mi vitae euismod. Duis aliquam efficitur mi, 
-					et eleifend velit.</p>
-				<div class="w3l_more">
-					<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
-						<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
-					</a>
-				</div> 
-			</div>
-			<div class="clearfix"> </div>
+				<div class="col-sm-3 col-xs-6 stats-grid">
+					<div class="stats-img w3-agileits">
+						<i class="fa fa-trophy" aria-hidden="true"></i>
+					</div>
+					<h5>Awards</h5>
+					<div class='numscroller numscroller-big-bottom' data-slno='1' data-min='0' data-max='269' data-delay='8' data-increment="1">269</div>
+				</div>
+				<div class="clearfix"></div>
+			</div> 
 		</div>
 	</div>
-	<!-- //blog-bottom -->
+	<!-- //Stats -->   
+	<!-- team -->
+	<div class="team agileits">
+		<div class="team-agileinfo">
+			<div class="container"> 
+				<h3 class="agileits-title w3title2">Our Team</h3> 
+				<div class="team-row agileits-w3layouts">
+					<div class="col-sm-3 col-xs-6 team-grids">
+						<div class="team-agileimg">
+							<img class="img-responsive" src="images/t1.jpg" alt="">
+							<div class="captn">
+								<div class="captn-top">
+									<h4>Edwards Doe</h4>
+									<p>Aenean pulvinar ac enimet posuere tincidunt velit Utin tincidunt</p>
+								</div> 
+								<div class="social-w3lsicon">
+									<ul class="agileits_social_list">
+										<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> 
+							</div>
+						</div>
+					</div>					
+					<div class="col-sm-3 col-xs-6 team-grids">
+						<div class="team-agileimg">
+							<img class="img-responsive" src="images/t2.jpg" alt="">
+							<div class="captn">
+								<div class="captn-top">
+									<h4>Mark Sophia</h4>
+									<p>Aenean pulvinar ac enimet posuere tincidunt velit Utin tincidunt</p>
+								</div>
+								<div class="social-w3lsicon">
+									<ul class="agileits_social_list">
+										<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> 
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6 team-grids">
+						<div class="team-agileimg">
+							<img class="img-responsive" src="images/t3.jpg" alt="">
+							<div class="captn">
+								<div class="captn-top">
+									<h4>Michael amet</h4>
+									<p>Aenean pulvinar ac enimet posuere tincidunt velit Utin tincidunt</p>
+								</div>
+								<div class="social-w3lsicon">
+									<ul class="agileits_social_list">
+										<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> 
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 col-xs-6 team-grids">
+						<div class="team-agileimg">
+							<img class="img-responsive" src="images/t4.jpg" alt="">
+							<div class="captn">
+								<div class="captn-top">
+									<h4>Daniel Nyari</h4>
+									<p>Aenean pulvinar ac enimet posuere tincidunt velit Utin tincidunt</p>
+								</div>
+								<div class="social-w3lsicon">
+									<ul class="agileits_social_list">
+										<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+										<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+									</ul>
+								</div> 
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //team -->   
 	<!-- news letter -->
 	<div class="subscribe jarallax">
 		<div class="sub-agileinfo">
@@ -319,7 +309,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- //modal-about -->  
+	<!-- //modal-about --> 
 	<!-- modal sign in  -->
 	<div class="modal bnr-modal about-modal w3-agileits fade" id="myModal2" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
@@ -400,47 +390,7 @@
 			imgHeight: 768
 		})
 	</script>  
-	<!-- //jarallax -->
-	<!-- ResponsiveTabs js -->
-	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
-	<script type="text/javascript">
-		$(document).ready(function () {
-			$('#horizontalTab').easyResponsiveTabs({
-				type: 'default', //Types: default, vertical, accordion           
-				width: 'auto', //auto or any width like 600px
-				fit: true   // 100% fit in a container
-			});
-		});
-	</script>
-	<!-- //ResponsiveTabs js -->  
-	<!-- banner-type-text -->
-	<script src="js/typed.js" type="text/javascript"></script>
-    <script>
-		$(function(){
-
-			$("#typed").typed({
-				// strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-				stringsElement: $('#typed-strings'),
-				typeSpeed: 30,
-				backDelay:700,
-				loop: true,
-				contentType: 'html', // or text
-				// defaults to false for infinite loop
-				loopCount: false,
-				callback: function(){ foo(); },
-				resetCallback: function() { newTyped(); }
-			});
-
-			$(".reset").click(function(){
-				$("#typed").typed('reset');
-			});
-
-		}); 
-		function newTyped(){ /* A new typed object */ }
-
-		function foo(){ console.log("Callback"); }
-    </script>
-	<!-- //banner-type-text -->
+	<!-- //jarallax -->  
 	<!-- flexSlider -->
 	<script defer src="js/jquery.flexslider.js"></script>
 	<script type="text/javascript">
@@ -483,7 +433,19 @@
 			
 		});
 	</script>
-	<!-- //smooth-scrolling-of-move-up --> 
+	<!-- //smooth-scrolling-of-move-up -->
+	<!-- ResponsiveTabs js -->
+	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#horizontalTab').easyResponsiveTabs({
+				type: 'default', //Types: default, vertical, accordion           
+				width: 'auto', //auto or any width like 600px
+				fit: true   // 100% fit in a container
+			});
+		});
+	</script>
+	<!-- //ResponsiveTabs js -->  
 	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

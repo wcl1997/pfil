@@ -35,6 +35,22 @@
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="login/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="login/ico/apple-touch-icon-57-precomposed.png">
 
+        <style>
+            #signOut{
+                margin-top: 5px;
+                width: 505px;
+            }
+        </style>
+
+        <script>
+            window.onload = function (ev) {
+                var signOut = document.getElementById("signOut");
+                signOut.onclick = function () {
+                    location.href = "register";
+                }
+            }
+        </script>
+
     </head>
 
     <body>
@@ -70,14 +86,15 @@
 			                    <form role="form" action="/check" method="post" class="login-form">
 			                    	<div class="form-group">
 			                    		<label class="sr-only" for="form-username">Username</label>
-			                        	<input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
+			                        	<input type="text" name="u_name" placeholder="Username..." class="form-username form-control" id="form-username">
 			                        </div>
 			                        <div class="form-group">
 			                        	<label class="sr-only" for="form-password">Password</label>
-			                        	<input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+			                        	<input type="password" name="u_password" placeholder="Password..." class="form-password form-control" id="form-password">
 			                        </div>
 			                        <button type="submit" class="btn">Sign in!</button>
 			                    </form>
+                                <button class="btn" id="signOut">Sign out!</button>
 		                    </div>
                         </div>
                     </div>

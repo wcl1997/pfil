@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>Contact</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -9,8 +9,7 @@
 <!-- Custom Theme files -->
 <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="all">   
-<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
-<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+<link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons --> 
 <!-- //Custom Theme files -->  
 <!-- web-fonts -->   
 <link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -19,25 +18,24 @@
 </head>
 <body> 
 	<!-- banner -->
-	<div class="w3ls-banner jarallax">
+	<div class="w3ls-banner about-w3lsbanner">
 		<div class="w3lsbanner-info">
 			<!-- header -->
 			<div class="header">
 				<div class="container">   
 					<div class="agile_header_grid"> 
-						<div class="header-mdl agileits-logo"><!-- header-two --> 
+						<div class="header-mdl agileits-logo"> 
 							<h1><a href="index">Best Pets</a></h1>
 						</div>
 						<div class="agileits_w3layouts_sign_in">
 							<ul>
 								<li><a href="/login" data-toggle="modal" class="play-icon">Login</a></li>
 								<li><a href="/register" data-toggle="modal" class="play-icon">Register</a></li>
-								<%--<li>Call us : <span>(+00) 123 234</span></li>--%>
 							</ul>
 						</div>
 						<div class="clearfix"> </div>
 					</div> 
-					<div class="header-nav"><!-- header-three --> 	
+					<div class="header-nav"><!-- header-two --> 	
 						<nav class="navbar navbar-default">
 							<div class="navbar-header">
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -50,10 +48,10 @@
 							<!-- top-nav -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav cl-effect-16">
-									<li><a href="index" class="active" data-hover="Home">Home</a></li>
+									<li><a href="index" data-hover="Home">Home</a></li>
 									<li><a href="about" data-hover="About">About</a></li>
 									<li><a href="gallery" data-hover="Gallery">Gallery</a></li>
-									<li><a href="contact" data-hover="Contact">Contact</a></li>
+									<li><a href="contact" class="active" data-hover="Contact">Contact</a></li>
 								</ul>  
 								<div class="clearfix"> </div>	
 							</div>
@@ -61,181 +59,64 @@
 					</div>	
 				</div>	
 			</div>	
-			<!-- //header --> 
-			<!-- banner-text -->
-			<div class="banner-text agileinfo"> 
-				<div class="container">
-					<div class="agile_banner_info">
-						<div class="agile_banner_info1">
-							<h6>Quis nostrum exercitationem </h6>
-							<div id="typed-strings" class="agileits_w3layouts_strings">
-								<p>Welcome to<i> Best Pets</i></p>
-								<p><i>Pulvinar</i> Vitae Site</p>
-								<p>Curabi temlaci <i>Pharetra</i></p>
-							</div>
-							<span id="typed" style="white-space:pre;"></span>
-						</div>
-					</div> 
-					<div class="agile_social_icons_banner">
-						<ul class="agileits_social_list">
-							<li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="w3_agile_dribble"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-							<li><a href="#" class="w3_agile_vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-						</ul>
-					</div> 
-				</div>
-			</div>
-			<!-- //banner-text -->  
+			<!-- //header -->  
 		</div>	
 	</div>	
-	<!-- //banner -->
-	<!-- banner-bottom -->
-	<div class="banner-bottom">
-		<div class="col-md-4 bnr-agileitsgrids">
-			<div class="agileinfo_banner_bottom_pos">
-				<div class="w3_agileits_banner_bottom_pos_grid">
-					<div class="col-xs-4 wthree_banner_bottom_grid_left">
-						<div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-							<i class="fa fa-clone" aria-hidden="true"></i>
-						</div>
-					</div>
-					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
-						<h4>Free Consultation</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 bnr-agileitsgrids w3grid1">
-			<div class="agileinfo_banner_bottom_pos">
-				<div class="w3_agileits_banner_bottom_pos_grid">
-					<div class="col-xs-4 wthree_banner_bottom_grid_left">
-						<div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-							<i class="fa fa-heart-o" aria-hidden="true"></i>
-						</div>
-					</div>
-					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
-						<h4>Certified Products</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-4 bnr-agileitsgrids w3grid2">
-			<div class="agileinfo_banner_bottom_pos">
-				<div class="w3_agileits_banner_bottom_pos_grid">
-					<div class="col-xs-4 wthree_banner_bottom_grid_left">
-						<div class="agile_banner_bottom_grid_left_grid hvr-radial-out">
-							<i class="fa fa-comment-o" aria-hidden="true"></i>
-						</div>
-					</div>
-					<div class="col-xs-8 wthree_banner_bottom_grid_right">	
-						<h4>Free Helpline</h4>
-						<p>Morbi viverra lacus commodo felis semper, eu iaculis lectus feugiat.</p>
-					</div>
-					<div class="clearfix"> </div>
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"> </div>
-	</div>
-	<!-- //banner-bottom -->
-	<!-- welcome -->	
-	<div class="welcome">
-		<div class="container"> 
-			<div class="col-md-6 w3ls_welcome_right"> 
-				<div class="flexslider">
-					<ul class="slides">
-						<li>	
-							<div class="agileits_w3layouts_welcome_grid">
-								<img src="images/g1.jpg" alt=" " class="img-responsive" />
-							</div>
-						</li>
-						<li>	
-							<div class="agileits_w3layouts_welcome_grid">
-								<img src="images/g2.jpg" alt=" " class="img-responsive" />
-							</div>
-						</li>
-						<li>	
-							<div class="agileits_w3layouts_welcome_grid">
-								<img src="images/g3.jpg" alt=" " class="img-responsive" />
-							</div>
-						</li>
-					</ul>
-				</div> 
-			</div>
-			<div class="col-md-6 w3ls_welcome_left"> 
-				<div class="w3ls_welcome_right1">
-					<h3 class="agileits-title">About Us</h3>
-					<h6>Lorem ipsum dolor <span> Consectetur </span> sit amet adipisicing elit. </h6>
-					<p>Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-					<div class="w3l_more">
-						<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
-							<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
-						</a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-	</div>
-	<!-- //welcome -->	
-	<!-- services --> 
-	<div class="services jarallax">
+	<!-- //banner --> 
+	<!-- contact -->
+	<div class="contact">
 		<div class="container">   
-			<h3 class="agileits-title w3title1">Our Services</h3>
-			<div class="services-w3ls-row">
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-					<span class="glyphicon glyphicon-home effect-1" aria-hidden="true"></span>
-					<h5>Lorem ipsum</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+			<h3 class="agileits-title w3title2">Contact Us</h3>
+			<div class="map-pos">
+				<div class="col-md-4 address-row">
+					<div class="col-xs-2 address-left">
+						<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-10 address-right">
+						<h5>Visit Us</h5>
+						<p>Bmr St, Canada, New York, USA</p>
+					</div>
+					<div class="clearfix"> </div>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-					<span class="glyphicon glyphicon-list-alt effect-1" aria-hidden="true"></span>
-					<h5>Ut non lacus</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
+				<div class="col-md-4 address-row w3-agileits">
+					<div class="col-xs-2 address-left">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-10 address-right">
+						<h5>Mail Us</h5>
+						<p><a href="mailto:info@example.com"> mail@example.com</a></p>
+					</div>
+					<div class="clearfix"> </div>
 				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid agileits-w3layouts">
-					<span class="glyphicon glyphicon-tree-deciduous effect-1" aria-hidden="true"></span>
-					<h5>Maec rutrum</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 services-grid">
-					<span class="glyphicon glyphicon-globe effect-1" aria-hidden="true"></span>
-					<h5>Phase gravida</h5>
-					<p>Itaque earum rerum hic a sapiente delectus in auctor sapien.</p>
-				</div> 
-				<div class="clearfix"> </div>
+				<div class="col-md-4 address-row">
+					<div class="col-xs-2 address-left">
+						<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+					</div>
+					<div class="col-xs-10 address-right">
+						<h5>Call Us</h5>
+						<p>+01 222 333 4444</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>   
 			</div>  
-		</div> 
-	</div>
-	<!-- //services -->
-	<!-- blog-bottom -->
-	<div class="blog-bottom">
-		<div class="container">
-			<div class="col-sm-5 w3_agile_blog_bottom_left">
-				<img src="images/s1.jpg" alt=" " class="img-responsive" />
-			</div>
-			<div class="col-sm-7 w3_agile_blog_bottom_right">
-				<h5>Best Pets</h5>
-				<h3>24/7 Customer Service Support</h3>
-				<p>Pellentesque accumsan cursus dui, sodales blandit urna sodales vitae. 
-					Maecenas placerat eget mi vitae euismod. Duis aliquam efficitur mi, 
-					et eleifend velit.</p>
-				<div class="w3l_more">
-					<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
-						<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
-					</a>
-				</div> 
-			</div>
-			<div class="clearfix"> </div>
+			<form action="#" method="post">
+				<div class="col-sm-6 contact-left">
+					<input type="text" name="Name" placeholder="Your Name" required="">
+					<input type="email" name="Email" placeholder="Email" required="">
+					<input type="text" name="Mobile Number" placeholder="Mobile Number" required="">
+				</div>
+				<div class="col-sm-6 contact-right"> 
+					<textarea name="Message" placeholder="Message" required=""></textarea>
+					<input type="submit" value="Submit" >
+				</div>
+				<div class="clearfix"></div>
+			</form>
 		</div>
-	</div>
-	<!-- //blog-bottom -->
+	</div>  
+	<!-- //contact --> 
+	<div class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24174.906176932098!2d-73.98255489041246!3d40.765031876857535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258bf12dbe975%3A0xf6bac5dd7bc5f711!2sPookie+and+Sebastian!5e0!3m2!1sen!2sin!4v1482923320436"></iframe> 
+	</div> 
 	<!-- news letter -->
 	<div class="subscribe jarallax">
 		<div class="sub-agileinfo">
@@ -319,7 +200,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- //modal-about -->  
+	<!-- //modal-about -->
 	<!-- modal sign in  -->
 	<div class="modal bnr-modal about-modal w3-agileits fade" id="myModal2" tabindex="-1" role="dialog">
 		<div class="modal-dialog" role="document">
@@ -389,18 +270,6 @@
 	<!-- js --> 
 	<script src="js/jquery-2.2.3.min.js"></script>  
 	<!-- //js -->  
-	<!-- jarallax -->  
-	<script src="js/SmoothScroll.min.js"></script> 
-	<script src="js/jarallax.js"></script> 
-	<script type="text/javascript">
-		/* init Jarallax */
-		$('.jarallax').jarallax({
-			speed: 0.5,
-			imgWidth: 1366,
-			imgHeight: 768
-		})
-	</script>  
-	<!-- //jarallax -->
 	<!-- ResponsiveTabs js -->
 	<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -413,47 +282,18 @@
 		});
 	</script>
 	<!-- //ResponsiveTabs js -->  
-	<!-- banner-type-text -->
-	<script src="js/typed.js" type="text/javascript"></script>
-    <script>
-		$(function(){
-
-			$("#typed").typed({
-				// strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-				stringsElement: $('#typed-strings'),
-				typeSpeed: 30,
-				backDelay:700,
-				loop: true,
-				contentType: 'html', // or text
-				// defaults to false for infinite loop
-				loopCount: false,
-				callback: function(){ foo(); },
-				resetCallback: function() { newTyped(); }
-			});
-
-			$(".reset").click(function(){
-				$("#typed").typed('reset');
-			});
-
-		}); 
-		function newTyped(){ /* A new typed object */ }
-
-		function foo(){ console.log("Callback"); }
-    </script>
-	<!-- //banner-type-text -->
-	<!-- flexSlider -->
-	<script defer src="js/jquery.flexslider.js"></script>
+	<!-- jarallax -->  
+	<script src="js/SmoothScroll.min.js"></script> 
+	<script src="js/jarallax.js"></script> 
 	<script type="text/javascript">
-		$(window).load(function(){
-		  $('.flexslider').flexslider({
-			animation: "slide",
-			start: function(slider){
-			  $('body').removeClass('loading');
-			}
-		  });
-		});
-	</script>
-	<!-- //flexSlider --> 
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>  
+	<!-- //jarallax -->  
 	<!-- start-smooth-scrolling -->
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script type="text/javascript" src="js/easing.js"></script>	
