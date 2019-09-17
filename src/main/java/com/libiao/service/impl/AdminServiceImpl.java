@@ -72,7 +72,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean postDelLog(Long adminId, Long postId){
-        AdminPost adminPost=null;
+        AdminPost adminPost=new AdminPost();
         adminPost.setAId(adminId);
         adminPost.setPId(postId);
         try{
@@ -86,7 +86,7 @@ public class AdminServiceImpl implements AdminService {
     }
     @Override
     public boolean userDelLog(Long adminId, Long userId){
-        AdminUser adminUser=null;
+        AdminUser adminUser=new AdminUser();
 
         adminUser.setAId(adminId);
         adminUser.setUId(userId);
