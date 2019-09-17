@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -95,7 +96,20 @@
 		<div class="container"> 
 			<h3 class="agileits-title w3title2">Gallery</h3>
 			<div class="agile_gallery_grids">	
-				<div class="col-sm-4 col-xs-4 agile_gallery_grid"> 
+				<div class="col-sm-4 col-xs-4 agile_gallery_grid">
+					<%--<c:forEach items="${posts}" var="post">
+						<div class="w3ls_gallery_grid">
+							<a href="post_img/${post.PImg}" class="lsb-preview wthree_p_grid" data-lsb-group="header">
+								<img src="post_img/${post.PImg}" alt=" " class="img-responsive" />
+								<div class="agileinfo_content_wrap">
+									<div class="agileits_content">
+										<h3>Best Pets</h3>
+										<p>Ne nam facilisis adolescens faucibus.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</c:forEach>--%>
 					<div class="w3ls_gallery_grid">
 						<a href="images/g1.jpg" class="lsb-preview wthree_p_grid" data-lsb-group="header">  
 							<img src="images/g1.jpg" alt=" " class="img-responsive" />
@@ -199,7 +213,7 @@
 							</div> 
 						</a>
 					</div>
-				</div> 
+				</div>
 				<div class="clearfix"> </div>
 			</div> 
 		</div>

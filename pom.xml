@@ -93,6 +93,12 @@
             <optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
         </dependency>
 
+        <!--FreeMarker模板视图依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+
         <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
