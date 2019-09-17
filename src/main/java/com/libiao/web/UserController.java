@@ -29,11 +29,17 @@ public class UserController {
         return "login";
     }
 
-    @RequestMapping(value = "/check")
-    public String check(User user) {
-        boolean f = userService.check(user.getU_name(), user.getU_password());
+    @RequestMapping("/loginOut")
+    public String loginOut(HttpServletRequest request){
+        request.getSession().invalidate();
+        return "gallery";
+    }
 
+    @RequestMapping(value = "/check")
+    public String check(User user, HttpServletRequest request) {
+        boolean f = userService.check(user.getU_name(), user.getU_password());
         if (f == true){
+            request.getSession().setAttribute("userName", user.getU_name());
             return "gallery";
         }
         return "loginErr";
@@ -68,11 +74,6 @@ public class UserController {
     @RequestMapping("/contact")
     public String contact(){
         return "contact";
-    }
-
-    @RequestMapping("/about")
-    public String about(){
-        return "about";
     }
 
     @RequestMapping("/codes")

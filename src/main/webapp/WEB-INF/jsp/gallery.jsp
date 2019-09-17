@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +18,7 @@
 <link href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 <!-- //web-fonts -->
 </head>
-<body> 
+<body>
 	<!-- banner -->
 	<div class="w3ls-banner about-w3lsbanner">
 		<div class="w3lsbanner-info">
@@ -29,10 +30,35 @@
 							<h1><a href="index">Best Pets</a></h1>
 						</div>
 						<div class="agileits_w3layouts_sign_in">
-							<ul>
+							<%
+								String userName = (String)request.getSession().getAttribute("userName");
+								if (userName == null){
+									out.println("<ul>\n" +
+											"\t\t\t\t\t\t\t\t<li><a href=\"/login\" data-toggle=\"modal\" class=\"play-icon\">Login</a></li>\n" +
+											"\t\t\t\t\t\t\t\t<li><a href=\"/register\" data-toggle=\"modal\" class=\"play-icon\">Register</a></li>\n" +
+											"\t\t\t\t\t\t\t</ul>");
+								}else {
+									out.println("<ul>\n" +
+											"\t\t\t\t\t\t\t\t<li><span>用户：" + userName + "</span></li>\n" +
+											"<li><a href=\"/loginOut\">退出</a></li>" +
+											"\t\t\t\t\t\t\t</ul>");
+								}
+							%>
+							<%--<c:if test="${userName }">
+								<ul>
+									<li><a href="/login" data-toggle="modal" class="play-icon">Login</a></li>
+									<li><a href="/register" data-toggle="modal" class="play-icon">Register</a></li>
+								</ul>
+							</c:if>
+								<ul>
+									<li><span>用户：${userName }</span></li>
+								</ul>--%>
+
+							<%--<ul>
+								<li><span>用户：${userName }</span></li>
 								<li><a href="/login" data-toggle="modal" class="play-icon">Login</a></li>
 								<li><a href="/register" data-toggle="modal" class="play-icon">Register</a></li>
-							</ul>
+							</ul>--%>
 						</div>
 						<div class="clearfix"> </div>
 					</div> 

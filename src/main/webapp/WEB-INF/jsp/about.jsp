@@ -1,3 +1,7 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.libiao.pojo.Post" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,45 +70,40 @@
 	<!-- //banner --> 
 	<!-- welcome -->	
 	<div class="welcome">
+		<c:forEach items="${posts }" var="post">
 		<div class="container"> 
 			<div class="col-md-6 w3ls_welcome_right"> 
 				<div class="flexslider">
 					<ul class="slides">
-						<li>	
-							<div class="agileits_w3layouts_welcome_grid">
-								<img src="images/g1.jpg" alt=" " class="img-responsive" />
-							</div>
-						</li>
-						<li>	
-							<div class="agileits_w3layouts_welcome_grid">
-								<img src="images/g2.jpg" alt=" " class="img-responsive" />
-							</div>
-						</li>
-						<li>	
-							<div class="agileits_w3layouts_welcome_grid">
-								<img src="images/g3.jpg" alt=" " class="img-responsive" />
-							</div>
+						<li>
+							<a href="/detail&pId=${post.PId}">
+								<div class="agileits_w3layouts_welcome_grid">
+									<img src="images/${post.PImg }" alt="" class="img-responsive">
+								</div>
+							</a>
+							<br>
 						</li>
 					</ul>
-				</div> 
-			</div>
-			<div class="col-md-6 w3ls_welcome_left"> 
-				<div class="w3ls_welcome_right1">
-					<h3 class="agileits-title">About Us</h3>
-					<h6>Lorem ipsum dolor <span> Consectetur </span> sit amet adipisicing elit. </h6>
-					<p>Quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-					<div class="w3l_more">
-						<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
-							<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
-						</a>
-					</div>
 				</div>
+			</div>
+
+		<div class="col-md-6 w3ls_welcome_left">
+			<div class="w3ls_welcome_right1">
+				<h3 class="agileits-title">${post.PTitle }</h3>
+				<p>${post.PTime}
+				<div class="w3l_more">
+					<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
+						<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
+					</a>
+				</div>
+			</div>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
+		</c:forEach>
 	</div>
-	<!-- //welcome -->	
+	<!-- //welcome -->
 	<!-- Stats -->
 	<div class="stats services jarallax"> 
 		<div class="container">    

@@ -94,7 +94,6 @@
 			                        </div>
 			                        <button type="submit" class="btn">Sign in!</button>
 			                    </form>
-                                <button class="btn" id="signOut">Sign out!</button>
 		                    </div>
                         </div>
                     </div>
