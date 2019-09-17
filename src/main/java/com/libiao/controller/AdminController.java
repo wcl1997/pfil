@@ -1,4 +1,4 @@
-package com.libiao.web;
+package com.libiao.controller;
 
 import com.libiao.pojo.Admin;
 import com.libiao.service.AdminService;

@@ -1,3 +1,4 @@
+<%@ page import="com.libiao.pojo.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -32,6 +33,7 @@
 						</div>
 						<div class="agileits_w3layouts_sign_in">
 							<%
+
 								String userName = (String)request.getSession().getAttribute("userName");
 								if (userName == null){
 									out.println("<ul>\n" +

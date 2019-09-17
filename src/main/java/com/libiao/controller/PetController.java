@@ -1,4 +1,4 @@
-package com.libiao.web;
+package com.libiao.controller;
 
 import com.libiao.pojo.Pet;
 import com.libiao.pojo.User;

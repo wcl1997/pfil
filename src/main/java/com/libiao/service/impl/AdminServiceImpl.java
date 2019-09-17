@@ -34,7 +34,7 @@ public class AdminServiceImpl implements AdminService {
 
     @Override
     public boolean deletePost(Long id) {
-        if(postService.deletePost(id)){
+        if(postService.deletePost(id.intValue())){
             return true;
         }
         return false;

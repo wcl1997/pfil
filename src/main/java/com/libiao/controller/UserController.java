@@ -1,6 +1,5 @@
-package com.libiao.web;
+package com.libiao.controller;
 
-import com.libiao.pojo.Post;
 import com.libiao.pojo.User;
 import com.libiao.service.PostService;
 import com.libiao.service.UserService;
@@ -9,7 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @Controller
 public class UserController {
@@ -46,7 +44,8 @@ public class UserController {
         if (f == true){
             user=userService.findUserByName(user.getU_name());
             request.getSession().setAttribute("user", user);
-            System.out.println(user);
+            request.getSession().setAttribute("userName", user.getU_name());
+//            System.out.println(user);
             return "gallery";
         }
         return "loginErr";
