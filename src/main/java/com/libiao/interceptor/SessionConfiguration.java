@@ -3,7 +3,7 @@ package com.libiao.interceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
+//1111
 @Configuration
 // web配置文件（web.xml）添加一个拦截器
 public class SessionConfiguration extends WebMvcConfigurerAdapter {
