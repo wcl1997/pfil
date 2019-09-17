@@ -12,4 +12,6 @@ public interface UserService {
     User findUserById(Integer id);
     List<User> findAll();
     boolean check(String userName, String password);
+
+    User findUserByName(String userName);
 }

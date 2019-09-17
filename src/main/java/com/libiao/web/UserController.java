@@ -44,7 +44,8 @@ public class UserController {
     public String check(User user, HttpServletRequest request) {
         boolean f = userService.check(user.getU_name(), user.getU_password());
         if (f == true){
-            request.getSession().setAttribute("userName", user.getU_name());
+            user=userService.findUserByName(user.getU_name());
+            request.getSession().setAttribute("user", user);
             System.out.println(user);
             return "gallery";
         }
@@ -73,9 +74,7 @@ public class UserController {
     }
 
     @RequestMapping("/gallery")
-    public String gallery(HttpServletRequest request){
-        List<Post> posts = postService.findAll();
-        request.setAttribute("posts", posts);
+    public String gallery(){
         return "gallery";
     }
 
