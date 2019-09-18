@@ -29,9 +29,6 @@ public class PostController {
     public String detail(@PathVariable("id") Integer id, HttpServletRequest request){
         Post post = postService.findPostById(id.longValue());
         request.getSession().setAttribute("post", post);
-        request.getSession().setAttribute("likeNum",postUserService.approveNum(post.getPId()));
-        request.getSession().setAttribute("dislikeNum",postUserService.dislikeNum(post.getPId()));
-        System.out.println(postUserService.dislikeNum(post.getPId())+""+postUserService.approveNum(post.getPId()));
         return "detail";
     }
 
