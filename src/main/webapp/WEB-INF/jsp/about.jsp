@@ -76,7 +76,7 @@
 				<div class="flexslider">
 					<ul class="slides">
 						<li>
-							<a href="/detail&pId=${post.PId}">
+							<a href="/detail/${post.PId}">
 								<div class="agileits_w3layouts_welcome_grid">
 									<img src="images/${post.PImg }" alt="" class="img-responsive">
 								</div>
