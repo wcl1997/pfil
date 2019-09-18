@@ -40,7 +40,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public boolean deletePost(Long id) {
+    public boolean deletePost(Integer id) {
         boolean flag=false;
         try{
             postDao.delete(id);
@@ -53,7 +53,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Post findPostById(Long id) {
+    public Post findPostById(Integer id) {
         return postDao.findOne(id);
     }
 

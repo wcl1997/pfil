@@ -29,7 +29,7 @@
                 text-align: center;
             }
             #pw{
-                bottom: 230px;
+                bottom: 166px;
                 line-height: 36px;
             }
             #em{
@@ -179,17 +179,17 @@
                     ev.preventDefault();
                 }
                 //验证邮箱格式
-                if (email.value != "") {
-                    var reg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
-                    if (!reg.test(email.value)) {
-                        var em = getDOMById("em");
-                        em.style.display = "block";
-                        email.onfocus = function () {
-                            em.style.display = "none";
-                        }
-                        ev.preventDefault();
-                    }
-                }
+                // if (email.value != "") {
+                //     var reg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+                //     if (!reg.test(email.value)) {
+                //         var em = getDOMById("em");
+                //         em.style.display = "block";
+                //         email.onfocus = function () {
+                //             em.style.display = "none";
+                //         }
+                //         ev.preventDefault();
+                //     }
+                // }
                 //验证11位手机号格式
                 if (phone.value != "") {
                     var part = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/;

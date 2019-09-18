@@ -1,6 +1,7 @@
-package com.libiao.web;
+package com.libiao.controller;
 
 import com.libiao.pojo.User;
+import com.libiao.service.PostService;
 import com.libiao.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +14,8 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    private PostService postService;
 
     /*@RequestMapping(value = "/login/{username}/{password}", method = RequestMethod.GET)
     public boolean login(@PathVariable("username") String userName, @PathVariable("password") String password){
@@ -41,7 +44,8 @@ public class UserController {
         if (f == true){
             user=userService.findUserByName(user.getU_name());
             request.getSession().setAttribute("user", user);
-            System.out.println(user);
+            request.getSession().setAttribute("userName", user.getU_name());
+//            System.out.println(user);
             return "gallery";
         }
         return "loginErr";
@@ -86,5 +90,10 @@ public class UserController {
     @RequestMapping("/index")
     public String index2(){
         return "index";
+    }
+
+    @RequestMapping("/test")
+    public String test(){
+        return "test";
     }
 }

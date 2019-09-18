@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Gallery</title>
+    <title>发帖</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
@@ -94,21 +94,34 @@
 <!-- gallery -->
 <div class="gallery team">
     <div class="container">
-        <div id="bread_crumb">
-            <div class="bread_center">
-                <a href="../index">首页</a>
-                <small>&gt</small>
-                <a href="../">${post.PTitle}</a>
-                <small>&gt</small>
-                <a href="#">帖子</a>
-
-            </div>
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">发帖</strong><small></small></div>
         </div>
-        <!--详情展示-->
-        <h1 style="color: red" align="center">${post.PTitle}</h1>
-        <img src="../images/${post.PImg }" alt="" style="width: 500px;">
-        <p style="color: gray">date:${post.PTime}</p>
-        <span style="color: #ffb774">内容:</span><h4>${post.PContent}</h4>
+        <hr>
+
+        <div class="edit_content">
+            <form action="/upload" method="post" id="add_form" style="background: none; width: 700px;" enctype="multipart/form-data">
+                <div class="item1">
+                    <div>
+                        <span>标题：</span>
+                        <input type="text" class="am-form-field" name="pTitle">&nbsp;&nbsp;
+                    </div>
+                </div>
+
+                <div class="item1">
+                    <span>图片上传：</span>
+                    <input type="file" name="pImg" style="margin-top: 13px">
+                </div>
+
+                <div class="item1 item_desc">
+                    <span>内容：</span>
+                    <textarea  id="desc" name="pContent" rows="4" cols="50"></textarea>
+                </div>
+                <button class="am-btn am-btn-default" type="button" id="add">发布</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="am-btn am-btn-default" type="button" id="reset">重置</button>
+            </form>
+        </div>
     </div>
 </div>
 <!-- //gallery -->
@@ -263,6 +276,17 @@
 </div>
 <!-- //modal sign in -->
 <!-- js -->
+<script src="add/js/jquery.min.js"></script>
+
+<script>
+
+    $("#add").click(function () {
+        //让表单提交 GoodsAddServlet
+        //获取表单  让其提交
+        $("#add_form").submit();
+    });
+
+</script>
 <script src="js/jquery-2.2.3.min.js"></script>
 <!-- //js -->
 <!-- ResponsiveTabs js -->

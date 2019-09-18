@@ -25,7 +25,7 @@ public class Post  implements Serializable {
 	@Id
 	@GeneratedValue
    	@Column(name = "p_id" )
-	private Long pId;
+	private Integer pId;
 
    	@Column(name = "p_time" )
 	private Date pTime;

@@ -20,6 +20,24 @@
 <link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 <!-- //web-fonts -->
+	<style>
+		a.fatie{
+			display: block;
+			/*border: 1px solid #900;*/
+			margin-top: 8px;
+			position: absolute;
+			right: 370px;
+			width: 138px;
+			height: 54px;
+			box-shadow: 2px 2px 8px #1b6d85;
+			font: 24px/1em 微软雅黑;
+			line-height: 54px;
+			letter-spacing: 6px;
+			color: #9ea4f7;
+			text-align: center;
+			/*vertical-align: center;*/
+		}
+	</style>
 </head>
 <body> 
 	<!-- banner -->
@@ -67,7 +85,8 @@
 			<!-- //header -->  
 		</div>	
 	</div>	
-	<!-- //banner --> 
+	<!-- //banner -->
+    <a href="/addPost" class="fatie">发帖</a>
 	<!-- welcome -->	
 	<div class="welcome">
 		<c:forEach items="${posts }" var="post">
@@ -92,7 +111,7 @@
 				<h3 class="agileits-title">${post.PTitle }</h3>
 				<p>${post.PTime}
 				<div class="w3l_more">
-					<a href="#" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
+					<a href="/detail/${post.PId}" class="button button--nina" data-text="Learn more" data-toggle="modal" data-target="#myModal">
 						<span>L</span><span>e</span><span>a</span><span>n</span> <span>m</span><span>o</span><span>r</span><span>e</span>
 					</a>
 				</div>

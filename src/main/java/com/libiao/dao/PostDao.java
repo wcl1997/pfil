@@ -5,5 +5,5 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 @Mapper
-public interface PostDao extends JpaRepository<Post, Long> {
+public interface PostDao extends JpaRepository<Post, Integer> {
 }
