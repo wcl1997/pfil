@@ -1,4 +1,4 @@
-package com.libiao.web;
+package com.libiao.controller;
 
 import com.libiao.pojo.Post;
 import com.libiao.pojo.PostUser;
@@ -20,12 +20,12 @@ public class PostUserController {
         User user=(User)request.getSession().getAttribute("user");
         Post post=(Post)request.getSession().getAttribute("post");
         PostUser postUser=new PostUser();
-        postUserService.checkDislike(user.getU_id().longValue(),post.getPId());//查看是否已经点过踩，如果点过将取消踩
+        postUserService.checkDislike(user.getU_id().longValue(),post.getPId().longValue());//查看是否已经点过踩，如果点过将取消踩
 
-        if(postUserService.checkApprove(user.getU_id().longValue(),post.getPId())){
+        if(postUserService.checkApprove(user.getU_id().longValue(),post.getPId().longValue())){
             return "Cancel Like";//查看是否已经点过赞，如果点过将取消赞
         }else{
-            postUser.setPId(post.getPId());
+            postUser.setPId(post.getPId().longValue());
             postUser.setUId(user.getU_id().longValue());
             postUserService.addPostUserApprove(postUser);
             return "Like";
@@ -36,12 +36,12 @@ public class PostUserController {
         User user=(User)request.getSession().getAttribute("user");
         Post post=(Post)request.getSession().getAttribute("post");
         PostUser postUser=new PostUser();
-        postUserService.checkApprove(user.getU_id().longValue(),post.getPId());//查看是否已经点过赞，如果点过将取消赞
+        postUserService.checkApprove(user.getU_id().longValue(),post.getPId().longValue());//查看是否已经点过赞，如果点过将取消赞
 
-        if(postUserService.checkDislike(user.getU_id().longValue(),post.getPId())){
+        if(postUserService.checkDislike(user.getU_id().longValue(),post.getPId().longValue())){
             return "Cancel dislike";//查看是否已经点过踩，如果点过将取消踩
         }else{
-            postUser.setPId(post.getPId());
+            postUser.setPId(post.getPId().longValue());
             postUser.setUId(user.getU_id().longValue());
             postUserService.addPostUserDislike(postUser);
             return "dislike";
