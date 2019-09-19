@@ -32,4 +32,7 @@ public class PostUser  implements Serializable {
    	@Column(name = "u_id" )
 	private Long uId;
 
+   	@Column(name="pu_state")
+	private String pustate;
+
 }

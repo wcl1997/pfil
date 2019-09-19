@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +29,21 @@
 							<h1><a href="index">Best Pets</a></h1>
 						</div>
 						<div class="agileits_w3layouts_sign_in">
-							<ul>
-								<li><a href="/login" data-toggle="modal" class="play-icon">Login</a></li>
-								<li><a href="/register" data-toggle="modal" class="play-icon">Register</a></li>
-							</ul>
+							<%
+
+								String userName = (String)request.getSession().getAttribute("userName");
+								if (userName == null){
+									out.println("<ul>\n" +
+											"\t\t\t\t\t\t\t\t<li><a href=\"/login\" data-toggle=\"modal\" class=\"play-icon\">Login</a></li>\n" +
+											"\t\t\t\t\t\t\t\t<li><a href=\"/register\" data-toggle=\"modal\" class=\"play-icon\">Register</a></li>\n" +
+											"\t\t\t\t\t\t\t</ul>");
+								}else {
+									out.println("<ul>\n" +
+											"\t\t\t\t\t\t\t\t<li><span>用户：" + userName + "</span></li>\n" +
+											"<li><a href=\"/loginOut\">退出</a></li>" +
+											"\t\t\t\t\t\t\t</ul>");
+								}
+							%>
 						</div>
 						<div class="clearfix"> </div>
 					</div> 
@@ -48,10 +60,10 @@
 							<!-- top-nav -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav cl-effect-16">
-									<li><a href="index" data-hover="Home">Home</a></li>
-									<li><a href="about" data-hover="About">About</a></li>
-									<li><a href="gallery" data-hover="Gallery">Gallery</a></li>
-									<li><a href="contact" class="active" data-hover="Contact">Contact</a></li>
+									<li><a href="index" data-hover="主页">主页</a></li>
+									<li><a href="about" data-hover="帖子">帖子</a></li>
+									<li><a href="gallery" data-hover="展示">展示</a></li>
+									<li><a href="contact" class="active" data-hover="交流">交流</a></li>
 								</ul>  
 								<div class="clearfix"> </div>	
 							</div>
@@ -114,23 +126,7 @@
 		</div>
 	</div>  
 	<!-- //contact --> 
-	<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24174.906176932098!2d-73.98255489041246!3d40.765031876857535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258bf12dbe975%3A0xf6bac5dd7bc5f711!2sPookie+and+Sebastian!5e0!3m2!1sen!2sin!4v1482923320436"></iframe> 
-	</div> 
-	<!-- news letter -->
-	<div class="subscribe jarallax">
-		<div class="sub-agileinfo">
-			<div class="container">
-				<h3 class="agileits-title w3title1">Get our free newsletter</h3>
-				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est consectetur adipisci velit sed quia non numquam eius.</p>
-				<form>
-					<input type="email" name="email" placeholder="Email Address" class="user" required="">
-					<input type="submit" value="Subscribe">
-				</form>
-				<p class="spam">We never share your information or use it to spam you</p>
-			</div> 
-		</div>
-	</div>
+
 	<!-- //news letter -->
 	<!-- footer -->
 	<div class="footer">

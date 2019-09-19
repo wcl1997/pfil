@@ -1,18 +1,21 @@
+<%@ page import="com.libiao.service.PostUserService" %>
+<%@ page import="com.libiao.pojo.PostUser" %>
+<%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Gallery</title>
+    <title>帖子详情</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- Custom Theme files -->
-    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
-    <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
-    <link href="css/lsb.css" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="../css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link href="../css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
+    <link href="../css/lsb.css" rel="stylesheet" type="text/css">
     <!-- //Custom Theme files -->
     <!-- web-fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -76,10 +79,10 @@
                         <!-- top-nav -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav cl-effect-16">
-                                <li><a href="index" data-hover="Home">Home</a></li>
-                                <li><a href="about" data-hover="About">About</a></li>
-                                <li><a href="gallery" class="active" data-hover="Gallery">Gallery</a></li>
-                                <li><a href="contact" data-hover="Contact">Contact</a></li>
+                                <li><a href="../index" data-hover="主页">主页</a></li>
+                                <li><a href="../about" data-hover="帖子">帖子</a></li>
+                                <li><a href="../gallery" data-hover="展示">展示</a></li>
+                                <li><a href="../contact" data-hover="交流">交流</a></li>
                             </ul>
                             <div class="clearfix"> </div>
                         </div>
@@ -92,23 +95,99 @@
 </div>
 <!-- //banner -->
 <!-- gallery -->
-<div class="gallery team">
+<style>
+    .gallery .container{
+        border: 1px solid #900;
+        margin: 5px auto;
+        padding: 10px 8px;
+        position: relative;
+    }
+    .gallery .container h1{
+        display: inline-block;
+        position: absolute;
+        top: 20px;
+        right: 25%;
+    }
+    .gallery .container div.centent{
+        position: absolute;
+        top: 78px;
+        left: 588px;
+    }
+    .gallery .container div.centent h4{
+        margin-bottom: 10px;
+    }
+    .gallery .container div.centent span{
+        padding: 2px 4px;
+        font: 16px/1.5em 微软雅黑;
+        color: #000;
+    }
+    .gallery .container .zan, .gallery .container .cai{
+        float: right;
+        margin: 1px 12px;
+        border: 1px solid #009;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px #0accff;
+        width: 56px;
+        height: 22px;
+        text-align: center;
+        cursor: pointer;
+    }
+</style>
+<script>
+    window.onload = function () {
+        // var wode = document.getElementById("wode");
+        // var cai = wode.getElementById("cai");
+        // var zan = wode.getElementById("zan");
+        var cai = document.getElementById("cai");
+        var zan = document.getElementById("zan");
+        cai.onmouseover = function () {
+            cai.style.background = "#ddd";
+            // cai.style.color = "#fff";
+        }
+        cai.onmouseout = function () {
+            cai.style.background = "#fff";
+            // cai.style.color = "#000";
+        }
+        zan.onmouseover = function () {
+            zan.style.background = "#ddd";
+            // cai.style.color = "#fff";
+        }
+        zan.onmouseout = function () {
+            zan.style.background = "#fff";
+            // cai.style.color = "#000";
+        }
+        zan.onclick = function () {
+            var xmlHttp;
+            if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            } else {
+                xmlHttp = new ActiveXObject('Microsofo.XMLHTTP');
+            }
+            xmlHttp.open("GET", "../approve");
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 & xmlHttp.status == 200) {
+                    var data = xmlHttp.responseText;
+                    zan.firstElementChild.innerHTML = data;
+                }
+            }
+            xmlHttp.send();
+            <%--location.href = "../approve/${sessionScope.post.PId}";--%>
+        }
+    }
+</script>
+<div class="gallery team" id="wode">
     <div class="container">
-        <div id="bread_crumb">
-            <div class="bread_center">
-                <a href="../index">首页</a>
-                <small>&gt</small>
-                <a href="../">${post.PTitle}</a>
-                <small>&gt</small>
-                <a href="#">帖子</a>
-
-            </div>
-        </div>
         <!--详情展示-->
-        <h1 style="color: red" align="center">${post.PTitle}</h1>
         <img src="../images/${post.PImg }" alt="" style="width: 500px;">
+        <h1 style="color: red" align="center">${post.PTitle}</h1>
         <p style="color: gray">date:${post.PTime}</p>
-        <span style="color: #ffb774">内容:</span><h4>${post.PContent}</h4>
+        <div class="centent">
+            <h4 style="color: #ffb774">内容:</h4><span>&nbsp;&nbsp;&nbsp;&nbsp;${post.PContent}</span>
+        </div>
+        <div class="pj">
+            <div class="cai" id="cai">踩&nbsp;&nbsp;<span><%=request.getSession().getAttribute("dislikeNum")%></span></div>
+            <div class="zan" id="zan">赞&nbsp;&nbsp;<span><%=request.getSession().getAttribute("likeNum")%></span></div>
+        </div>
     </div>
 </div>
 <!-- //gallery -->
@@ -141,12 +220,10 @@
                 <div class="col-md-3 col-sm-6 footer-grid">
                     <h3>Navigation</h3>
                     <ul>
-                        <li><a href="index">Home</a> </li>
-                        <li><a href="about">About</a></li>
-                        <li><a href="gallery">Gallery</a></li>
-                        <li><a href="icons">Web Icons</a></li>
-                        <li><a href="codes">Short Codes</a></li>
-                        <li><a href="contact">Contact</a></li>
+                        <li><a href="index" data-hover="Home">主页</a></li>
+                        <li><a href="about" data-hover="About">帖子</a></li>
+                        <li><a href="gallery" class="active" data-hover="Gallery">展示</a></li>
+                        <li><a href="contact" data-hover="Contact">交流</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 footer-list">

@@ -1,7 +1,8 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Home</title>
+<title>主页</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -12,7 +13,7 @@
 <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 <!-- //Custom Theme files -->  
-<!-- web-fonts -->   
+<!-- web-fonts -->
 <link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
 <!-- //web-fonts -->
@@ -29,11 +30,21 @@
 							<h1><a href="index">Best Pets</a></h1>
 						</div>
 						<div class="agileits_w3layouts_sign_in">
-							<ul>
-								<li><a href="/login" data-toggle="modal" class="play-icon">Login</a></li>
-								<li><a href="/register" data-toggle="modal" class="play-icon">Register</a></li>
-								<%--<li>Call us : <span>(+00) 123 234</span></li>--%>
-							</ul>
+							<%
+
+								String userName = (String)request.getSession().getAttribute("userName");
+								if (userName == null){
+									out.println("<ul>\n" +
+											"\t\t\t\t\t\t\t\t<li><a href=\"/login\" data-toggle=\"modal\" class=\"play-icon\">Login</a></li>\n" +
+											"\t\t\t\t\t\t\t\t<li><a href=\"/register\" data-toggle=\"modal\" class=\"play-icon\">Register</a></li>\n" +
+											"\t\t\t\t\t\t\t</ul>");
+								}else {
+									out.println("<ul>\n" +
+											"\t\t\t\t\t\t\t\t<li><span>用户：" + userName + "</span></li>\n" +
+											"<li><a href=\"/loginOut\">退出</a></li>" +
+											"\t\t\t\t\t\t\t</ul>");
+								}
+							%>
 						</div>
 						<div class="clearfix"> </div>
 					</div> 
@@ -50,10 +61,10 @@
 							<!-- top-nav -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav cl-effect-16">
-									<li><a href="index" class="active" data-hover="Home">Home</a></li>
-									<li><a href="about" data-hover="About">About</a></li>
-									<li><a href="gallery" data-hover="Gallery">Gallery</a></li>
-									<li><a href="contact" data-hover="Contact">Contact</a></li>
+									<li><a href="index" class="active" data-hover="主页">主页</a></li>
+									<li><a href="about" data-hover="帖子">帖子</a></li>
+									<li><a href="gallery" data-hover="展示">展示</a></li>
+									<li><a href="contact" data-hover="交流">交流</a></li>
 								</ul>  
 								<div class="clearfix"> </div>	
 							</div>
@@ -265,12 +276,10 @@
 					<div class="col-md-3 col-sm-6 footer-grid">
 						<h3>Navigation</h3>
 						<ul>
-							<li><a href="index">Home</a> </li>
-							<li><a href="about">About</a></li>
-							<li><a href="gallery">Gallery</a></li>
-							<li><a href="icons">Web Icons</a></li>
-							<li><a href="codes">Short Codes</a></li>
-							<li><a href="contact">Contact</a></li>
+							<li><a href="index">主页</a> </li>
+							<li><a href="about">帖子</a></li>
+							<li><a href="gallery">展示</a></li>
+							<li><a href="contact">交流</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-list">

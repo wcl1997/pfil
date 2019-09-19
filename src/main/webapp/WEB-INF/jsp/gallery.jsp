@@ -78,10 +78,10 @@
 							<!-- top-nav -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 								<ul class="nav navbar-nav cl-effect-16">
-									<li><a href="index" data-hover="Home">Home</a></li>
-									<li><a href="about" data-hover="About">About</a></li>
-									<li><a href="gallery" class="active" data-hover="Gallery">Gallery</a></li>
-									<li><a href="contact" data-hover="Contact">Contact</a></li>
+									<li><a href="index" data-hover="主页">主页</a></li>
+									<li><a href="about" data-hover="帖子">帖子</a></li>
+									<li><a href="gallery" class="active" data-hover="宠物">宠物</a></li>
+									<li><a href="contact" data-hover="交流">交流</a></li>
 								</ul>  
 								<div class="clearfix"> </div>	
 							</div>
@@ -94,9 +94,29 @@
 	</div>	
 	<!-- //banner --> 
 	<!-- gallery -->
+	<style>
+		.addPet{
+			display: inline-block;
+			/*width: 200px;*/
+			/*height: 80px;*/
+			margin: 4px 2px;
+			margin-bottom: 10px;
+			padding: 4px 8px;
+			border: 1px solid #0accff;
+			border-radius: 6px;
+			cursor: pointer;
+			font: 18px/1em 微软雅黑;
+			position: relative;
+			left: 996px;
+		}
+		.addPet:hover{
+			background: #0accff;
+			color: #fff;
+		}
+	</style>
 	<div class="gallery team">
 		<div class="container"> 
-			<h3 class="agileits-title w3title2">Gallery</h3>
+			<a class="addPet" href="addPet">增加展示宠物</a>
 			<div class="agile_gallery_grids">	
 				<div class="col-sm-4 col-xs-4 agile_gallery_grid">
 					<%--<c:forEach items="${posts}" var="post">

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>发帖</title>
+    <title>添加宠物</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
@@ -13,8 +13,6 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
     <link href="css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons -->
     <link href="css/lsb.css" rel="stylesheet" type="text/css">
-<%--    <link rel="stylesheet" href="/add/css/style.css" type="text/css" />--%>
-    <link rel="stylesheet" href="/add/css/amazeui.min.css" />
     <!-- //Custom Theme files -->
     <!-- web-fonts -->
     <link href="http://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
@@ -95,50 +93,52 @@
 <!-- //banner -->
 <!-- gallery -->
 <style>
-   .gallery .container .edit_content{
-       width: 700px;
-       margin: 0px auto;
-   }
-   .gallery .container .edit_content input{
-       display: inline-block;
-       width: 200px;
-   }
-   .gallery .container .edit_content .item1{
-       margin: 20px 0px;
-   }
-   .gallery .container .edit_content .button{
-       padding-left: 60px;
-   }
+    .gallery .container form{
+        width: 400px;
+        margin: 0px auto;
+    }
+    .gallery .container .edit_content input{
+        display: inline-block;
+        width: 200px;
+    }
+    .gallery .container .edit_content .item1{
+        margin: 20px 0px;
+    }
+    .gallery .container .edit_content .button{
+        padding-left: 60px;
+    }
+    .gallery .container .edit_content .button input{
+        width: 72px;
+    }
 </style>
 <div class="gallery team">
     <div class="container">
         <div class="am-cf am-padding am-padding-bottom-0">
-            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">发帖</strong><small></small></div>
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">添加宠物</strong><small></small></div>
         </div>
         <hr>
 
         <div class="edit_content">
-            <form action="/upload" method="post" id="add_form" style="background: none; width: 700px;" enctype="multipart/form-data">
+            <form action="/addUserPet" method="post" id="add_form" enctype="multipart/form-data">
                 <div class="item1">
                     <div>
-                        <span>标题：</span>
-                        <input type="text" class="am-form-field" name="pTitle">&nbsp;&nbsp;
+                        <span>姓名：</span>
+                        <input type="text" class="am-form-field" name="pName">&nbsp;&nbsp;
                     </div>
                 </div>
-
                 <div class="item1 itemImg">
-                    <span>图片上传：</span>
-                    <input type="file" name="pImg">
+                    <span>性别：</span>
+                    <input type="text" class="am-form-field" name="pSex">
                 </div>
 
                 <div class="item1 item_desc">
-                    <span>内容：</span>
-                    <textarea  id="desc" name="pContent" rows="6" cols="50"></textarea>
+                    <span>品种：</span>
+                    <input type="text" class="am-form-field" name="pSpecies">
                 </div>
                 <div class="button">
-                    <button class="am-btn am-btn-default" type="button" id="add">发布</button>
+                    <input type="submit" value="添加">
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                    <button class="am-btn am-btn-default" type="button" id="reset">重置</button>
+                    <input type="reset" value="清空">
                 </div>
             </form>
         </div>

@@ -237,11 +237,11 @@ ul.dropdown-menu {
     color: #fff;
     font-size: 2.5em;
 }
-@-keyframes blink{
-	0% { opacity:1; }
-	50% { opacity:0; }
-	100% { opacity:1; }
-}
+/*@-keyframes blink{*/
+/*	0% { opacity:1; }*/
+/*	50% { opacity:0; }*/
+/*	100% { opacity:1; }*/
+/*}*/
 @-webkit-keyframes blink{
 	0% { opacity:1; }
 	50% { opacity:0; }

@@ -2,6 +2,8 @@ package com.libiao.controller;
 
 import com.libiao.pojo.Post;
 import com.libiao.service.PostService;
+import com.libiao.service.PostUserService;
+import org.omg.PortableInterceptor.RequestInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +16,8 @@ import java.util.List;
 public class PostController {
     @Autowired
     private PostService postService;
+    @Autowired
+    private PostUserService postUserService;
 
     @RequestMapping("/about")
     public String about(HttpServletRequest request){
@@ -25,7 +29,11 @@ public class PostController {
     @RequestMapping("/detail/{id}")
     public String detail(@PathVariable("id") Integer id, HttpServletRequest request){
         Post post = postService.findPostById(id);
-        request.setAttribute("post", post);
+        request.getSession().setAttribute("post", post);
+        String likeNum=String.valueOf(postUserService.approveNum(id.longValue()));
+        String dislikeNum=String.valueOf(postUserService.dislikeNum(id.longValue()));
+        request.getSession().setAttribute("likeNum",likeNum);
+        request.getSession().setAttribute("dislikeNum",dislikeNum);
         return "detail";
     }
 
@@ -34,11 +42,4 @@ public class PostController {
         return "addPost";
     }
 
-   /* @RequestMapping("/upload")
-    public String upload(@RequestParam("file") MultipartFile file) throws Exception {
-        File saveFile = new File("D:");
-        FileOutputStream outputStream = new FileOutputStream(saveFile);
-        IOUtils.copy(file.getInputStream(), outputStream);
-        return "test";
-    }*/
 }

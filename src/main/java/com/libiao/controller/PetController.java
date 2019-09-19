@@ -4,6 +4,7 @@ import com.libiao.pojo.Pet;
 import com.libiao.pojo.User;
 import com.libiao.service.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
-@RestController
+@Controller
 public class PetController {
     @Autowired
     PetService petService;
 
-    @RequestMapping(value = "/findUserPets",method = RequestMethod.GET)
+    @RequestMapping(value = "/findUserPets")
     public List<Pet> findUserPets(HttpServletRequest request){
         User user=(User)request.getSession().getAttribute("user");
         List<Pet> pets = petService.findPetByUserId(user.getU_id().longValue());
@@ -25,8 +26,8 @@ public class PetController {
         return pets;
     }
 
-    @RequestMapping(value = "/addPet",method = RequestMethod.POST)
-    public String addPet(HttpServletRequest request, @RequestBody Pet pet){
+    @RequestMapping(value = "/addUserPet")
+    public String addPet(HttpServletRequest request,Pet pet){
         User user=(User)request.getSession().getAttribute("user");
         pet.setUId(user.getU_id().longValue());
         if(petService.addPet(pet)){
@@ -35,21 +36,26 @@ public class PetController {
         return "error";
     }
 
-    @RequestMapping(value="/delPet",method = RequestMethod.POST)
-    public String delPet(@RequestBody Long petId){
+    @RequestMapping(value="/delPet")
+    public String delPet(Long petId){
         if(petService.deletePet(petId)){
             return "Success";
         }
         return "error";
     }
 
-    @RequestMapping(value = "updatePet",method = RequestMethod.PUT)
-    public String updatePet(HttpServletRequest request,@RequestBody Pet pet){
+    @RequestMapping(value = "updatePet")
+    public String updatePet(HttpServletRequest request,Pet pet){
         User user=(User)request.getSession().getAttribute("user");
         pet.setUId(user.getU_id().longValue());
         if(petService.updatePost(pet)){
             return "Success";
         }
         return "error";
+    }
+
+    @RequestMapping(value = "addPet")
+    public String addPet(){
+        return "addPet";
     }
 }
