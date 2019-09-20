@@ -156,22 +156,35 @@
             zan.style.background = "#fff";
             // cai.style.color = "#000";
         }
+        var xmlHttp;
+        if (window.XMLHttpRequest) {
+            xmlHttp = new XMLHttpRequest();
+        } else {
+            xmlHttp = new ActiveXObject('Microsofo.XMLHTTP');
+        }
         zan.onclick = function () {
-            var xmlHttp;
-            if (window.XMLHttpRequest) {
-                xmlHttp = new XMLHttpRequest();
-            } else {
-                xmlHttp = new ActiveXObject('Microsofo.XMLHTTP');
-            }
             xmlHttp.open("GET", "../approve");
             xmlHttp.onreadystatechange = function () {
                 if (xmlHttp.readyState == 4 & xmlHttp.status == 200) {
                     var data = xmlHttp.responseText;
-                    zan.firstElementChild.innerHTML = data;
+                    data = data.split(";");
+                    zan.firstElementChild.innerHTML = data[0];
+                    cai.firstElementChild.innerHTML = data[1];
                 }
             }
             xmlHttp.send();
-            <%--location.href = "../approve/${sessionScope.post.PId}";--%>
+        }
+        cai.onclick = function () {
+            xmlHttp.open("GET", "../dislike");
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 & xmlHttp.status == 200) {
+                    var data = xmlHttp.responseText;
+                    data = data.split(";");
+                    zan.firstElementChild.innerHTML = data[0];
+                    cai.firstElementChild.innerHTML = data[1];
+                }
+            }
+            xmlHttp.send();
         }
     }
 </script>

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -27,13 +29,16 @@ public class PetController {
     }
 
     @RequestMapping(value = "/addUserPet")
-    public String addPet(HttpServletRequest request,Pet pet){
+    public void addPet(HttpServletRequest request, HttpServletResponse response, Pet pet) throws IOException {
         User user=(User)request.getSession().getAttribute("user");
         pet.setUId(user.getU_id().longValue());
         if(petService.addPet(pet)){
-            return "Success";
+            response.getOutputStream().write("true".getBytes("utf-8"));
+//            return "Success";
+        } else {
+            response.getOutputStream().write("false".getBytes("utf-8"));
         }
-        return "error";
+//        return "error";
     }
 
     @RequestMapping(value="/delPet")

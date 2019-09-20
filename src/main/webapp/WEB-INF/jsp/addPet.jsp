@@ -111,6 +111,36 @@
         width: 72px;
     }
 </style>
+<script>
+    window.onload = function () {
+        var form = document.getElementById("add_form");
+        form.onsubmit = function () {
+            var name = document.getElementById("name").value;
+            var sex = document.getElementById("sex").value;
+            var species = document.getElementById("species").value;
+            var xmlHttp;
+            if (window.XMLHttpRequest) {
+                xmlHttp = new XMLHttpRequest();
+            } else {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlHttp.open("POST", "/addUserPet");
+            xmlHttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+            xmlHttp.onreadystatechange = function () {
+                if (xmlHttp.readyState == 4 & xmlHttp.status == 200) {
+                    var data = xmlHttp.responseText;
+                    if (data == "true") {
+                        alert("添加成功！");
+                    } else {
+                        alert("添加失败！");
+                    }
+                }
+            }
+            xmlHttp.send("pName=" + name + "&pSex=" + sex + "&pSpecies=" + species);
+            alert("正在添加!");
+        }
+    }
+</script>
 <div class="gallery team">
     <div class="container">
         <div class="am-cf am-padding am-padding-bottom-0">
@@ -119,21 +149,21 @@
         <hr>
 
         <div class="edit_content">
-            <form action="/addUserPet" method="post" id="add_form" enctype="multipart/form-data">
+            <form method="post" id="add_form" enctype="multipart/form-data">
                 <div class="item1">
                     <div>
                         <span>姓名：</span>
-                        <input type="text" class="am-form-field" name="pName">&nbsp;&nbsp;
+                        <input type="text" class="am-form-field" name="pName" id="name">&nbsp;&nbsp;
                     </div>
                 </div>
                 <div class="item1 itemImg">
                     <span>性别：</span>
-                    <input type="text" class="am-form-field" name="pSex">
+                    <input type="text" class="am-form-field" name="pSex" id="sex">
                 </div>
 
                 <div class="item1 item_desc">
                     <span>品种：</span>
-                    <input type="text" class="am-form-field" name="pSpecies">
+                    <input type="text" class="am-form-field" name="pSpecies" id="species">
                 </div>
                 <div class="button">
                     <input type="submit" value="添加">
